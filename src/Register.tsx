@@ -1,10 +1,10 @@
 import React from "react";
-import { Link, RouteComponentProps } from "react-router-dom";
-import { LoginForm } from "./LoginForm";
+import { RouteComponentProps } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { pageMaxWidth } from "./Context";
+import { RegisterForm } from "./RegisterForm";
 
-export const Login: React.FC<RouteComponentProps> = (props) => {
+export const Register: React.FC<RouteComponentProps> = (props) => {
   return (
     <div style={{ display: "flex", justifyContent: "center" }}>
       <Helmet>
@@ -19,14 +19,11 @@ export const Login: React.FC<RouteComponentProps> = (props) => {
           }}
           className="card p-3"
         >
-          <LoginForm
+          <RegisterForm
             onLogin={() => {
               props.history.push("/");
             }}
           />
-          <Link to="/accounts/register" >
-            Register
-          </Link>
         </div>
       </div>
     </div>
